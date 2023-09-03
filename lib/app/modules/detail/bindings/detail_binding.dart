@@ -6,11 +6,8 @@ import '../controllers/detail_controller.dart';
 class DetailBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<DetailProvider>(
-      () => DetailProvider(),
-    );
-    Get.lazyPut<DetailController>(
-      () => DetailController(),
+    Get.lazyPut(
+      () => DetailController(detailProvider: DetailProvider()),
     );
   }
 }

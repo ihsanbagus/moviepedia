@@ -1,4 +1,4 @@
-# Ecommerce Product List
+# Movie List
 
 Indivara Take Home Test.
 

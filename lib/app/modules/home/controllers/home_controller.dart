@@ -7,10 +7,12 @@ class HomeController extends GetxController {
   final nowPlayingTitle = MovieCategory.nowPlaying.name;
   final popularTitle = MovieCategory.popular.name;
   final topRatedTitle = MovieCategory.topRated.name;
-  final movieProvider = Get.find<HomeProvider>();
   final nowPlaying = MovieModel().obs;
   final popular = MovieModel().obs;
   final topRated = MovieModel().obs;
+  final HomeProvider movieProvider;
+
+  HomeController({required this.movieProvider});
 
   @override
   void onInit() {

@@ -1,0 +1,23 @@
+name: Coverage Check
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+#     inputs:
+#       environment:
+#         type: string
+#         default: TEST
+#         required: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: VeryGoodOpenSource/very_good_coverage@v2
+        with:
+          path: '/coverage/lcov.info'
+          min_coverage: 80
+          exclude: '**/*_observer.dart **/change.dart'

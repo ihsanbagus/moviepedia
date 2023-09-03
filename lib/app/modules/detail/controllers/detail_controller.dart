@@ -3,7 +3,10 @@ import 'package:moviepedia/app/modules/detail/models/detail_model.dart';
 import 'package:moviepedia/app/modules/detail/providers/detail_provider.dart';
 
 class DetailController extends GetxController with StateMixin<DetailModel> {
-  final detailProvider = Get.find<DetailProvider>();
+  final DetailProvider detailProvider;
+
+  DetailController({required this.detailProvider});
+
   @override
   void onInit() {
     super.onInit();
@@ -11,7 +14,7 @@ class DetailController extends GetxController with StateMixin<DetailModel> {
     getDetailMovie(id);
   }
 
-  void getDetailMovie(String? id) async {
+  Future<void> getDetailMovie(String? id) async {
     change(null, status: RxStatus.loading());
     await Future.delayed(const Duration(seconds: 3));
     detailProvider.getDetailMovie(id).then((v) {
