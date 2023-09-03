@@ -35,12 +35,16 @@ $ flutter build web         #for Build a web application bundle.
     |       └── routes              # Routes folder
     └── test                        # Test files (alternatively `spec` or `tests`)
 
+### Coverage
+![image](https://github.com/ihsanbagus/moviepedia/assets/32384214/4e36294b-6156-4383-99f2-e4e72b457eff)
+
 ## Flutter Documentation
 
 - [Install Flutter](https://flutter.dev/get-started/)
 - [Flutter documentation](https://flutter.dev/docs)
 - [Development wiki](https://github.com/flutter/flutter/wiki)
 - [Contributing to Flutter](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md)
+
 
 ### Made with 💖
 
